@@ -34,14 +34,14 @@ body, html {height: 100%}
 <body style="background-color:grey;">
 
 <div class="bgimg w3-display-container w3-text-white">
-  <div class="w3-display-middle w3-jumbo">
+  <div class="w3-display-topmiddle w3-jumbo" style="z-index: 1;">
     <p><img src="pictures/banner.png"></p>
   </div>
-  <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button"> Ver la carta</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button">Reservas</button></p>
+  <div class="w3-display-middle w3-container w3-xlarge" style=" margin-top: 50px; width: 390px;">
+    <p style="float: right;"><button onclick="document.getElementById('menu').style.display='block'" class="w3-button " > Ver la carta</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button ">Reservas</button></p>
   </div>
-  <div class="w3-display-bottomleft w3-container" id="grad">
+  <div class="w3-display-topmiddle w3-container" id="grad">
     <p class="w3-large" style="color:white;"> Abierto de lunes a viernes de 16:00 a 20:00 hs.</p>
     <p class="w3-large" style="color: #D2691E;">Guevara 500, Ciudad de Rengo.</p>
 </div>
