@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurante</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+h5 {
+  color:black;
+}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('pictures/parr.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.w3-button {
+      background-color: #8B4513;
+      box-shadow: 5px 5px 5px black;
+      border-radius: 4px;
+      color: black;
+      font-style: 'Helvetic';}
+
+      #grad {
+        width: 100%; 
+        border-top: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+</style>
+<body style="background-color:grey;">
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p><img src="pictures/banner.png"></p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button"> Ver la carta</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button">Reservas</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container" id="grad">
+    <p class="w3-large" style="color:white;"> Abierto de lunes a viernes de 16:00 a 20:00 hs.</p>
+    <p class="w3-large" style="color: #D2691E;">Guevara 500, Ciudad de Rengo.</p>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Entradas</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Sopa de tomate <b>$2.50</b></h5>
+      <h5>Sopa de lentejas <b>$3.50</b></h5>
+      <h5>Crepe de pollo <b>$1.00</b></h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Plato principal</h1>
+    </div>
+    <div class="w3-container">
+      <h5 style="color:black;">Reineta c/ salsa de alcaparras <b>$8.50</b></h5>
+      <h5>Lagsaña de verdura <b>$5.50</b></h5>
+      <h5>Gnoquis <b>$4.00</b></h5>
+      <h5>Salmón c/ salsa blanca <b>$6.50</b></h5>
+      <h5>Plato del día <b>$5.00</b></h5>
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Postres</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Helado <b>$2.50</b></h5>
+      <h5>Leche asada<b>$2.00</b></h5>
+      <h5>Torta de chocolate con nuez <b>$4.00</b></h5>
+      <h5>Flan <b>$5.50</b></h5>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Reservas</h1>
+    </div>
+    <div class="w3-container">
+      <p style="color: brown;">Reserve su mesa. Debe llegar con diez minutos de anticipación para confirmar la misma.</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Introduzca su nombre para la reserva..." required name="name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Numero de teléfono" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Hora y fecha de la reserva" required name="date" value="2017-11-16T20:00"></p> <!-- especial cuidado en este punto -->
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Descripción" required name="Message"></p>
+        <p><button class="w3-button" type="submit">Hacer reserva</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
