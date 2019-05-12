@@ -30,6 +30,11 @@ body, html {height: 100%}
       box-shadow: 2px 5px 5px  black;
       border-radius: 4px;
       color: black;
+      transition: all .3s ease;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
       }
 
 .w3-button-white {
@@ -44,21 +49,29 @@ body, html {height: 100%}
   margin-left: 30px;
   margin-top: 60px; 
   border: 4px solid black; 
-  box-shadow: 4px 4px 4px black;
+  box-shadow: 4px 4px 4px 4px black;
 }  
 
 .img_slide{
     border-radius: 50%; 
     max-width: 60%;
     max-height: 60%; 
-    border: 2px solid black;
-    box-shadow: 3px 3px 3px 3px #D4AC0D;
+    /*border: 2px solid black;
+    box-shadow: 3px 3px 3px 3px #D4AC0D;*/
     margin-top: 5px;
     position: absolute; top: 150px;
     display: inline-block;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  
+}
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
 
 /*
  * This is a RIBBON extra class
@@ -173,15 +186,22 @@ body, html {height: 100%}
 <div class="w3-display-container w3-display-left novedades" >
   <h2 id="novedades"style=""> Novedades: </h2>
   <div>
-  <img src="pictures/star.png" style="display: inline-block; position: absolute; left: 32px; top: 140px;"><img class="w3-display-middle img_slide" src="pictures/lagsaña.jpg"> <img src="pictures/star.png" style="display: inline-block; float: right; position: absolute; right: 34px; top: 143px;">
+  <img src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;"><img class="w3-display-middle img_slide card" src="pictures/lagsaña.jpg"> <img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;">
   <div class="w3-display-container">
-  <p class="w3-display-topmiddle" style=""> <img src="pictures/star.png" style="display: none;">
+  <p class="w3-display-topmiddle"  <img src="pictures/star.png" style="display: none;">
   <p id="img_description" > Plato del día: Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.</p>
   </div>
   <p id="pave_icon_paragraph" > <img id="pave_icon_img" src="pictures/pave-icon.png"></p>
+  <p> <img src="pictures/tetera.svg" style="width: 67.7px; height: 67.8px; margin-right: 5px; margin-bottom: 5px;"  class="w3-display-bottomright"  id="tetera_svg" alt="Gusta de una taza?!"> </p>
+  <!--<p> <img src="pictures/tetera.svg" style="width: 47.4px; height: 47.5px; margin-right: 58.4px; margin-bottom: 5px; "  class="w3-display-bottomright"  id="tetera_svg" alt="3/4 de taza"> </p>
+  <p> <img src="pictures/tetera.svg" style="width: 38.7px; height: 38.8px; margin-right: 103.1px; margin-bottom: 5px; "  class="w3-display-left"  id="tetera_svg" alt="1/2 taza?!"> </p> -->
 </div >
-  
 </div>
+
+
+</div>
+
+
 
 <!-- Menu Modal -->
 <div id="menu" class="w3-modal">
