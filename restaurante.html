@@ -10,15 +10,40 @@
 <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
 <style>
   
-body,h1,h5 {font-family: "Stylish", sans-serif}
+body,h1,h5 {font-family: "Stylish", cursive}
+table {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    border-radius: 4px;
+    margin-top:20px;
+}
 h5 {
   color:black;
-  font-size: 23px;
-  font-family: 'Raleway', sans-serif;
+  font-size: 24.5px;
+  font-family: 'Dancing Script', cursive;
 }
 body, html {height: 100%}
+a:visited {
+  text-decoration: underline;
+  color: silver;}
+
+a:link {
+  color:silver;
+}
+
+
+a:hover{
+  text-decoration: underline;
+  color: #282c37;
+}
+
+a:active { 
+  color: #282c37;
+}
+
 .bgimg {
-  background-image: url('pictures/parr.png');
+  background-image: url('pictures/parr.jpg');
   background-color: black;
   min-height: 100%;
   background-position: center;
@@ -49,7 +74,7 @@ body, html {height: 100%}
   margin-left: 30px;
   margin-top: 60px; 
   border: 4px solid black; 
-  box-shadow: 4px 4px 4px 4px black;
+  box-shadow: 4px 4px 4px black;
 }  
 
 .img_slide{
@@ -74,8 +99,16 @@ body, html {height: 100%}
 }
 
 /*
+
+ .entradas_table>tr div:nth-child(odd) {
+  background-color: grey;
+} Not working at all :'( 
+*/
+
+/*
  * This is a RIBBON extra class
 */
+
 .ribbon{
   font-size:20px;
   position:relative;
@@ -164,12 +197,45 @@ body, html {height: 100%}
         height: 200px;
         filter: alpha(opacity=50); opacity: 0.5;
       }
+
+      
+
+      #platoPrincipal {
+        background-color: rgba(100,30,22,0.9); /*730d0d*/
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+       
+      }
+
+      #entrada {
+        background-color: rgba(0,82,33,0.8);
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        
+        
+      }
+
+      #postres {
+        background-color: rgba(0,100,90,0.9);
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        
+      } 
+
+      #carta1 {
+        background-color: rgba(139,69,19,0.75);
+        box-shadow: 0px 2px 5px 1px black inset;
+      }
+      #carta2{
+        background-color: rgba(210,105,30,0.7);
+      }
+      
 </style>
 <body>
 
 <div class="bgimg w3-display-container w3-text-white">
   <div class="w3-display-topmiddle w3-jumbo" style="z-index: 1;">
-   <p><img src="pictures/banner2.png"></p>
+   <p><!--<img src="pictures/banner2png"> --> </p>
   </div>
   <div class="w3-display-middle w3-container w3-xlarge" style=" margin-top: 50px; width: 390px;">
     <p style="float: right;"><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-hover-white" > Ver la carta </button></p>
@@ -179,14 +245,18 @@ body, html {height: 100%}
     
     <p class="w3-large" style="color:white;"> Abierto de lunes a viernes de 16:00 a 20:00 hs.</p>
     <p class="w3-large" style="color: #D2691E;">Nos encontramos en Guevara 500, Ciudad de Rengo.</p>
-    <p class="w3-large w3-display-bottomright" style="color: silver;"> Visita nuestra página de facebook ! <img src="pictures/fb.png" style="width: 30px; height: 30px; margin-right: 10px;"></p>
-    <p class="w3-large w3-display-topright" style="margin-right: 10px;"> ¡Contáctanos a nuestros teléfonos! <em>+956 7892 2783</em> <img src="pictures/wp.jpg" style="width: 30px; height: 30px;"> </p>
+    <p class="w3-large w3-display-bottomright" style="margin-right: 15px;"><a href="#here"> Visita nuestra página de facebook </a>! <img src="pictures/fb.png" style="width: 30px; height: 30px; margin-left: 5px;"></p>
+    <p class="w3-large w3-display-topright" style="margin-right: 15px;"> ¡Contáctanos a nuestros teléfonos! <em>+956 7892 2783</em> <img src="pictures/wp.jpg" style="width: 30px; height: 30px; margin-left: 5px;"> </p>
 </div>
-
+<!--
+            /// Widget de novedades ( pasarella de imagenes aún no implementada).
+-->
 <div class="w3-display-container w3-display-left novedades" >
   <h2 id="novedades"style=""> Novedades: </h2>
   <div>
-  <img src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;"><img class="w3-display-middle img_slide card" src="pictures/lagsaña.jpg"> <img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;">
+  <img src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;">
+  <img class="w3-display-middle img_slide card" src="pictures/lagsaña.jpg"> 
+  <img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;">
   <div class="w3-display-container">
   <p class="w3-display-topmiddle"  <img src="pictures/star.png" style="display: none;">
   <p id="img_description" > Plato del día: Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.</p>
@@ -198,42 +268,44 @@ body, html {height: 100%}
 </div >
 </div>
 
+<!-- 
+            ///   Widget de novedades ( pasarella de imágenes aún no implementada).
+-->
 
-</div>
+<!--
+    Parte dos del archivo
+-->
 
-
-
-<!-- Menu Modal -->
+<!-- Menu Modal (VER DIVS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)-->
 <div id="menu" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black w3-display-container">
+    <div class="w3-container w3-display-container" id="entrada">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1 style="background-color: #27AE60; background-size: cover;">Entradas</h1>
+      <h1>Entradas</h1>
     </div>
-    <div class="w3-container" >
-      <h5>Sopa de tomate  .........................................................................................................................        <b>      $2.50</b></h5>
-      <h5>Sopa de lentejas <b>$3.50</b></h5>
-      <h5>Crepe de pollo <b>$1.00</b></h5>
-    </div>
-    <div class="w3-container w3-black">
+   
+      <div class="w3-container" id="carta1"><h5>Sopa de tomate <b style="float: right;"> $2.50</b></h5></div>
+      <div class="w3-container " id="carta2"><h5>Sopa de lentejas <b style="float: right;">$3.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Crepe de pollo <b  style="float: right;">$1.00</b></h5></div>
+  
+    
+    <div class="w3-container " id="platoPrincipal">
       <h1>Plato principal</h1>
     </div>
-    <div class="w3-container">
-      <h5 style="color:black;">Reineta c/ salsa de alcaparras <b>$8.50</b></h5>
-      <h5>Lagsaña de verdura <b>$5.50</b></h5>
-      <h5>Gnoquis <b>$4.00</b></h5>
-      <h5>Salmón c/ salsa blanca <b>$6.50</b></h5>
-      <h5>Plato del día <b>$5.00</b></h5>
-    </div>
-    <div class="w3-container w3-black">
+    <div class="w3-container" id="carta1"> <h5 style="color:black;">Reineta c/ salsa de alcaparras <b style="float: right;">$8.50</b></h5> </div>
+      <div class="w3-container" id="carta2"><h5>Lagsaña de verdura <b style="float: right;" >$5.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Gnoquis <b style="float: right;">$4.00</b></h5></div>
+      <div class="w3-container" id="carta2"><h5>Salmón c/ salsa blanca <b style="float: right;">$6.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Plato del día <b style="float: right;">$5.00</b></h5></div>
+    
+    <div class="w3-container" id="postres">
       <h1>Postres</h1>
     </div>
-    <div class="w3-container">
-      <h5>Helado <b>$2.50</b></h5>
-      <h5>Leche asada<b>$2.00</b></h5>
-      <h5>Torta de chocolate con nuez <b>$4.00</b></h5>
-      <h5>Flan <b>$5.50</b></h5>
-    </div>
+    <div class="w3-container" id="carta2"><h5>Helado <b style="float: right;">$2.50</b></h5></div>
+    <div class="w3-container" id="carta1"><h5>Leche asada<b style="float: right;">$2.00</b></h5></div>
+    <div class="w3-container" id="carta2"> <h5>Torta de chocolate con nuez <b style="float: right;">$4.00</b></h5></div>
+    <div class="w3-container" id="carta1"> <h5>Flan <b style="float: right;">$5.50</b></h5> </div>
+    
   </div>
 </div>
 
