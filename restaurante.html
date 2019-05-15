@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
@@ -86,6 +87,12 @@ a:active {
     margin-top: 5px;
     position: absolute; top: 150px;
     display: inline-block;
+}
+
+.description {
+ 
+  margin-left: 2px; 
+  margin-top: 160px;
 }
 
 .card {
@@ -178,11 +185,11 @@ a:active {
       }
 
       #img_description {
-        font-size: 23px; 
-        margin-top: 170px; 
+        font-family: 'Indie Flower', cursive;
+        font-size: 24.6px; 
         color: black; 
-        padding-left: 10px;
-        padding-right: 5px;
+        text-align: center;
+      
       }
 
       #pave_icon_paragraph {
@@ -195,7 +202,7 @@ a:active {
       #pave_icon_img {
         width: 250px; 
         height: 200px;
-        filter: alpha(opacity=50); opacity: 0.5;
+        filter: alpha(opacity=50); opacity: 0.3;
       }
 
       
@@ -229,7 +236,12 @@ a:active {
       #carta2{
         background-color: rgba(210,105,30,0.7);
       }
-      
+
+      #dotOfMenu { /* dots of menú */
+        margin-left: 4px;
+        color: 282c37;
+      }
+
 </style>
 <body>
 
@@ -253,19 +265,24 @@ a:active {
 -->
 <div class="w3-display-container w3-display-left novedades" >
   <h2 id="novedades"style=""> Novedades: </h2>
-  <div>
-  <img src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;">
-  <img class="w3-display-middle img_slide card" src="pictures/lagsaña.jpg"> 
-  <img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;">
-  <div class="w3-display-container">
-  <p class="w3-display-topmiddle"  <img src="pictures/star.png" style="display: none;">
-  <p id="img_description" > Plato del día: Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.</p>
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 7px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 38px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 68px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 97px;"></img>
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 128px;"></img>
+  <div id="img_slide">
+  <img  id='arrow_l' src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;"> 
+  <a id='arrow_r'><img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;"> </a>
+  <a><img class="w3-display-middle img_slide card" id="lag" > </a> 
+  </div> <!-- IMAGE SLIDE DIV !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+  <div class="w3-container description" > <!-- THIS IS THE DESCRIPTION DIV -->
+  <p id="img_description"> </p>
   </div>
   <p id="pave_icon_paragraph" > <img id="pave_icon_img" src="pictures/pave-icon.png"></p>
   <p> <img src="pictures/tetera.svg" style="width: 67.7px; height: 67.8px; margin-right: 5px; margin-bottom: 5px;"  class="w3-display-bottomright"  id="tetera_svg" alt="Gusta de una taza?!"> </p>
   <!--<p> <img src="pictures/tetera.svg" style="width: 47.4px; height: 47.5px; margin-right: 58.4px; margin-bottom: 5px; "  class="w3-display-bottomright"  id="tetera_svg" alt="3/4 de taza"> </p>
   <p> <img src="pictures/tetera.svg" style="width: 38.7px; height: 38.8px; margin-right: 103.1px; margin-bottom: 5px; "  class="w3-display-left"  id="tetera_svg" alt="1/2 taza?!"> </p> -->
-</div >
+</div>
 </div>
 
 <!-- 
@@ -281,30 +298,55 @@ a:active {
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-display-container" id="entrada">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      
       <h1>Entradas</h1>
     </div>
    
-      <div class="w3-container" id="carta1"><h5>Sopa de tomate <b style="float: right;"> $2.50</b></h5></div>
-      <div class="w3-container " id="carta2"><h5>Sopa de lentejas <b style="float: right;">$3.50</b></h5></div>
-      <div class="w3-container" id="carta1"><h5>Crepe de pollo <b  style="float: right;">$1.00</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Sopa de tomate
+      <em id='#dotOfMenu'>.........................................................................................................................
+      </em> <b style="float: right;"> $2.50</b></h5></div>
+      <div class="w3-container " id="carta2"><h5>Sopa de lentejas 
+      <em id='#dotOfMenu'>.........................................................................................................................
+      </em><b style="float: right;">$3.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Crepe de pollo 
+          <em id='#dotOfMenu'>............................................................................................................................
+            </em><b  style="float: right;">$1.00</b></h5></div>
   
     
     <div class="w3-container " id="platoPrincipal">
       <h1>Plato principal</h1>
     </div>
-    <div class="w3-container" id="carta1"> <h5 style="color:black;">Reineta c/ salsa de alcaparras <b style="float: right;">$8.50</b></h5> </div>
-      <div class="w3-container" id="carta2"><h5>Lagsaña de verdura <b style="float: right;" >$5.50</b></h5></div>
-      <div class="w3-container" id="carta1"><h5>Gnoquis <b style="float: right;">$4.00</b></h5></div>
-      <div class="w3-container" id="carta2"><h5>Salmón c/ salsa blanca <b style="float: right;">$6.50</b></h5></div>
-      <div class="w3-container" id="carta1"><h5>Plato del día <b style="float: right;">$5.00</b></h5></div>
+    <div class="w3-container" id="carta1"> <h5 style="color:black;">Reineta c/ salsa de alcaparras 
+        <em id='#dotOfMenu'>................................................................................................
+          </em><b style="float: right;">$8.50</b></h5> </div>
+      <div class="w3-container" id="carta2"><h5>Lagsaña de verdura 
+          <em id='#dotOfMenu'>..................................................................................................................
+            </em><b style="float: right;" >$5.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Gnoquis 
+          <em id='#dotOfMenu'>.........................................................................................................................
+            </em><b style="float: right;">$4.00</b></h5></div>
+      <div class="w3-container" id="carta2"><h5>Salmón c/ salsa blanca 
+          <em id='#dotOfMenu'>.............................................................................................................
+            </em><b style="float: right;">$6.50</b></h5></div>
+      <div class="w3-container" id="carta1"><h5>Plato del día 
+          <em id='#dotOfMenu'>.........................................................................................................................
+            </em><b style="float: right;">$5.00</b></h5></div>
     
     <div class="w3-container" id="postres">
       <h1>Postres</h1>
     </div>
-    <div class="w3-container" id="carta2"><h5>Helado <b style="float: right;">$2.50</b></h5></div>
-    <div class="w3-container" id="carta1"><h5>Leche asada<b style="float: right;">$2.00</b></h5></div>
-    <div class="w3-container" id="carta2"> <h5>Torta de chocolate con nuez <b style="float: right;">$4.00</b></h5></div>
-    <div class="w3-container" id="carta1"> <h5>Flan <b style="float: right;">$5.50</b></h5> </div>
+    <div class="w3-container" id="carta2"><h5>Helado
+        <em id='#dotOfMenu'>.........................................................................................................................
+          </em> <b style="float: right;">$2.50</b></h5></div>
+    <div class="w3-container" id="carta1"><h5>Leche asada
+        <em id='#dotOfMenu'>.........................................................................................................................
+          </em><b style="float: right;">$2.00</b></h5></div>
+    <div class="w3-container" id="carta2"> <h5>Torta de chocolate con nuez 
+        <em id='#dotOfMenu'>........................................................................................................
+          </em><b style="float: right;">$4.00</b></h5></div>
+    <div class="w3-container" id="carta1"> <h5>Flan 
+        <em id='#dotOfMenu'>.........................................................................................................................
+          </em><b style="float: right;">$5.50</b></h5> </div>
     
   </div>
 </div>
@@ -329,6 +371,41 @@ a:active {
   </div>
 </div>
 
+<script>
+ let images = { src: 'pictures/lagsaña.jpg',
+                description: 'Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.',
+                descriptionTittle: 'Plato del dia: '
+                }
+
+                console.log(images);
+
+var tittle = images.descriptionTittle;
+var text = document.getElementById("img_description");
+var img = document.getElementById("lag");
+
+//implementation of slide widget ;)
+lag.src = images.src;
+text.innerHTML = "<b> <em>" + tittle + " </em></b>" + images.description;
+
+//changestars
+
+var goldenstar = "pictures/goldenstar-ico.png";
+var oldstar = "pictures/blackstar-ico.jpg";
+var blackstar = document.getElementById("blackstar");
+
+blackstar.addEventListener('mouseover', function(){
+          blackstar.src= goldenstar;
+});
+
+blackstar.addEventListener('mouseout', function(){
+  blackstar.src = oldstar;
+});
+
+
+
+
+
+</script>
 
 
 </body>
