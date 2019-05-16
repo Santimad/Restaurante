@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
 <style>
-  
+input, select {
+  font-size: 16.7px;
+}
+
+
 body,h1,h5 {font-family: "Stylish", cursive}
 table {
     width: 100%;
@@ -55,7 +60,7 @@ a:active {
       background-color: #8B4513;
       box-shadow: 2px 5px 5px  black;
       border-radius: 4px;
-      color: black;
+      color: ivory;
       transition: all .3s ease;
       transition-property: all;
       transition-duration: 0.3s;
@@ -299,7 +304,7 @@ a:active {
     <div class="w3-container w3-display-container" id="entrada">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       
-      <h1>Entradas</h1>
+      <h1 >Entradas</h1>
     </div>
    
       <div class="w3-container" id="carta1"><h5>Sopa de tomate
@@ -351,25 +356,65 @@ a:active {
   </div>
 </div>
 
-<!-- Contact Modal -->
-<div id="contact" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black">
+<!-- Reservas -->
+<div id="contact" class="w3-modal ">
+  <div class="w3-modal-content w3-animate-zoom ">
+    <div class="w3-container  w3-card-4" style="background-color:#282c37;">
       <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1>Reservas</h1>
+      <h1 style="color:ivory; ">Reservas</h1> <!-- like this color 6c2119 -->
     </div>
     <div class="w3-container">
-      <p style="color: black;">Reserve su mesa. Debe llegar con diez minutos de anticipación para confirmar la misma.</p>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Introduzca su nombre para la reserva..." required name="name"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Numero de teléfono" required name="People"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Hora y fecha de la reserva" required name="date" value="2017-11-16T20:00"></p> <!-- especial cuidado en este punto -->
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Descripción" required name="Message"></p>
+      <p style="color: #b30000; font-size: 19px;">Para realizar una reserva rellene los campos con la información requerida y en seguida nos contactaremos con usted al número ingresado para poder confirmar la mesa, en caso de no obtener respuesta se tomará como una solicitud falsa y la reserva será descartada.</p>
+      <form action="/action_page.php"  target="_blank">
+        <div class="w3-row w3-section">
+            <div class="w3-col" style="width:50px;"><i class="w3-xxlarge fa fa-user"></i></div>
+              <div class="w3-rest"> <!--  Ocupa el resto del ancho de la columna (porsiaca) -->
+                <input class="w3-input w3-border" type="text" placeholder="Introduzca su nombre para la reserva..." required name="name">
+              </div>
+          </div>
+          <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone" style="color: #106b21"></i></div>
+                <div class="w3-rest"> <!--  Ocupa el resto del ancho de la columna (porsiaca) -->
+                <input class="w3-input w3-border" type="text" placeholder="Numero de teléfono" required name="Numero">
+                </div>
+            </div>
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-calendar" style="color:#1c49a4;"></i></div>
+                  <div class="w3-rest"> <!--  Ocupa el resto del ancho de la columna (porsiaca) -->
+                    <input class="w3-input  w3-border" type="date" placeholder="Hora y fecha de la reserva" required name="date" value="dia-mes-año">
+                  </div>
+              </div>
+              <div class="w3-row w3-section">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-clock-o" style="color: #b30000"></i></div>
+                    <div class="w3-rest"> <!--  Ocupa el resto del ancho de la columna (porsiaca) -->
+                      <select class="w3-select  w3-border" required name="Hora"> 
+                          <option value="" disabled selected>Eliga la hora de reserva</option>
+                          <option value="1">20:00hs</option>
+                          <option value="2">21:00hs</option>
+                          <option value="3">22:00hs</option>
+                          <option value="3">etc...</option>
+                        </select>
+                    </div>
+                </div>
+              <div class="w3-row w3-section" style="padding-bottom: 10px;">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-users" style="color: darkgrey;"></i></div>
+                    <div class="w3-rest"> <!--  Ocupa el resto del ancho de la columna (porsiaca) -->
+                      <select class="w3-select  w3-border" required name="Cantidad de personas"> 
+                          <option value="" disabled selected>Seleccione la cantidad de personas para la reserva</option>
+                          <option value="1">1 persona</option>
+                          <option value="2">2 personas</option>
+                          <option value="3">3 personas</option>
+                          <option value="3">4 o mas personas</option>
+                        </select>
+                    </div>
+                </div>
+                
+        
         <p><button class="w3-button" type="submit">Hacer reserva</button></p>
       </form>
     </div>
   </div>
-</div>
+
 
 <script>
  let images = { src: 'pictures/lagsaña.jpg',
@@ -395,15 +440,12 @@ var blackstar = document.getElementById("blackstar");
 
 blackstar.addEventListener('mouseover', function(){
           blackstar.src= goldenstar;
+          
 });
 
 blackstar.addEventListener('mouseout', function(){
   blackstar.src = oldstar;
 });
-
-
-
-
 
 </script>
 
