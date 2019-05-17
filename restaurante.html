@@ -14,7 +14,9 @@
 input, select {
   font-size: 16.7px;
 }
-
+b{
+  color: #641E16;
+}
 
 body,h1,h5 {font-family: "Stylish", cursive}
 table {
@@ -75,7 +77,7 @@ a:active {
 
 .novedades {
   width: 30%;
-  height: 470px;
+  height: 440px;
   background-color: rgba(255, 204, 102,0.75); 
   margin-left: 30px;
   margin-top: 60px; 
@@ -83,10 +85,18 @@ a:active {
   box-shadow: 4px 4px 4px black;
 }  
 
+.starImages img {
+    height: 34px; 
+    width: 34px;
+    margin-top: 7px;
+}
+
 .img_slide{
     border-radius: 50%; 
-    max-width: 60%;
-    max-height: 60%; 
+    /*max-width: 60%;
+    max-height: 60%; */
+    width : 60%;
+    height: auto;
     /*border: 2px solid black;
     box-shadow: 3px 3px 3px 3px #D4AC0D;*/
     margin-top: 5px;
@@ -108,6 +118,10 @@ a:active {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.favIcon {
+  width: 30px; height: 30px; 
 }
 
 /*
@@ -175,6 +189,34 @@ a:active {
 /*
 * ENd of ribbon extra class
 */
+
+  @media only screen and (max-width: 768px) {
+    #footer {
+        width: 100%; 
+        border-top: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+      .notShow {
+        display:none;
+      }
+
+      .novedades {
+        display: none;
+      }
+
+      #largerDots {
+        display:none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      #footer {
+        display: none;
+        width: 100%; 
+        border-top: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+  }
 
       #grad {
         width: 100%; 
@@ -258,27 +300,37 @@ a:active {
     <p style="float: right;"><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-hover-white" > Ver la carta </button></p>
     <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-hover-white">Reservas</button></p>
   </div>
-  <div class="w3-display-topmiddle w3-container" id="grad">
-    
+
+  <div class="w3-display-topmiddle w3-container" id="grad"> 
     <p class="w3-large" style="color:white;"> Abierto de lunes a viernes de 16:00 a 20:00 hs.</p>
     <p class="w3-large" style="color: #D2691E;">Nos encontramos en Guevara 500, Ciudad de Rengo.</p>
-    <p class="w3-large w3-display-bottomright" style="margin-right: 15px;"><a href="#here"> Visita nuestra página de facebook </a>! <img src="pictures/fb.png" style="width: 30px; height: 30px; margin-left: 5px;"></p>
-    <p class="w3-large w3-display-topright" style="margin-right: 15px;"> ¡Contáctanos a nuestros teléfonos! <em>+956 7892 2783</em> <img src="pictures/wp.jpg" style="width: 30px; height: 30px; margin-left: 5px;"> </p>
+    <p class="w3-large w3-display-bottomright notShow" style="margin-right: 15px;"><a href="#here"> Visita nuestra página de facebook </a>! <img src="pictures/fb.png" class="favIcon" style="margin-left: 5px;"></p>
+    <p class="w3-large w3-display-topright notShow" style="margin-right: 15px;"> ¡Contáctanos a nuestros teléfonos! <em>+956 7892 2783</em> <img src="pictures/wp.jpg" class ="favIcon" style="margin-left: 5px;"> </p>
 </div>
+
+<div class="w3-display-bottommiddle w3-container" id="footer"> 
+  <p style="margin-right: 15px;"><a href="#here"> Visita nuestra página de facebook </a>! <img src="pictures/fb.png" class="favIcon" style="margin-left: 5px;"></p>
+  <p style="margin-right: 15px;"> ¡Contáctanos a nuestros teléfonos! <em>+956 7892 2783</em> <img src="pictures/wp.jpg" class ="favIcon" style="margin-left: 5px;"> </p>
+</div>
+
+
+
 <!--
             /// Widget de novedades ( pasarella de imagenes aún no implementada).
 -->
 <div class="w3-display-container w3-display-left novedades" >
-  <h2 id="novedades"style=""> Novedades: </h2>
-  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 7px;"></img> 
-  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 38px;"></img> 
-  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 68px;"></img> 
-  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 97px;"></img>
-  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style="height: 34px; width: 34px; margin-top: 7px; margin-right: 128px;"></img>
+  <h2 id="novedades"> Novedades: </h2>
+  <div class="starImages">
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style=" margin-right: 7px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" id="blackstar" style=" margin-right: 38px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style=" margin-right: 68px;"></img> 
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style=" margin-right: 97px;"></img>
+  <img class="w3-display-topright" src="pictures/blackstar-ico.jpg" style=" margin-right: 128px;"></img>
+</div>
   <div id="img_slide">
   <img  id='arrow_l' src="pictures/arrow_l.svg" style="display: inline-block; position: absolute; left: 32px; top: 140px; height: 5%;"> 
-  <a id='arrow_r'><img src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;"> </a>
-  <a><img class="w3-display-middle img_slide card" id="lag" > </a> 
+  <img id='arrow_r' src="pictures/arrow_r.svg" style="float: right; position: absolute; right: 34px; top: 143px; height: 5%;"> 
+  <a><img class="w3-display-middle img_slide card" id="lag" ></a> 
   </div> <!-- IMAGE SLIDE DIV !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
   <div class="w3-container description" > <!-- THIS IS THE DESCRIPTION DIV -->
   <p id="img_description"> </p>
@@ -304,54 +356,55 @@ a:active {
     <div class="w3-container w3-display-container" id="entrada">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       
-      <h1 >Entradas</h1>
+      <h1 > <img src="pictures/chef.png" style="width:50px; height: auto;"> Entradas </h1>
     </div>
    
       <div class="w3-container" id="carta1"><h5>Sopa de tomate
-      <em id='#dotOfMenu'>.........................................................................................................................
-      </em> <b style="float: right;"> $2.50</b></h5></div>
-      <div class="w3-container " id="carta2"><h5>Sopa de lentejas 
-      <em id='#dotOfMenu'>.........................................................................................................................
-      </em><b style="float: right;">$3.50</b></h5></div>
+      <em id='#dotOfMenu'>.....................................................................<span id="largerDots">....................................................
+      </span></em> <b style="float: right;"> $2.50</b></h5></div>
+      <div class="w3-container " id="carta2"><h5>Sopa de lentejas
+                          
+      <em id='#dotOfMenu'>.....................................................................<span id="largerDots">....................................................
+      </span></em><b style="float: right;">$3.50</b></h5></div>
       <div class="w3-container" id="carta1"><h5>Crepe de pollo 
-          <em id='#dotOfMenu'>............................................................................................................................
-            </em><b  style="float: right;">$1.00</b></h5></div>
+          <em id='#dotOfMenu'>.................................................................<span id="largerDots">...........................................................
+         </span>   </em><b  style="float: right;">$1.00</b></h5></div>
   
     
     <div class="w3-container " id="platoPrincipal">
-      <h1>Plato principal</h1>
+      <h1>Plato principal <img src="pictures/food.png" style="width:70px; height: auto; margin-left: 6px;"></h1>
     </div>
     <div class="w3-container" id="carta1"> <h5 style="color:black;">Reineta c/ salsa de alcaparras 
-        <em id='#dotOfMenu'>................................................................................................
-          </em><b style="float: right;">$8.50</b></h5> </div>
+        <em id='#dotOfMenu'>....................................................................<span id="largerDots">............................
+        </span>  </em><b style="float: right;">$8.50</b></h5> </div>
       <div class="w3-container" id="carta2"><h5>Lagsaña de verdura 
-          <em id='#dotOfMenu'>..................................................................................................................
-            </em><b style="float: right;" >$5.50</b></h5></div>
+          <em id='#dotOfMenu'>..................................................................<span id="largerDots">................................................
+           </span> </em><b style="float: right;" >$5.50</b></h5></div>
       <div class="w3-container" id="carta1"><h5>Gnoquis 
-          <em id='#dotOfMenu'>.........................................................................................................................
-            </em><b style="float: right;">$4.00</b></h5></div>
+          <em id='#dotOfMenu'>....................................................................<span id="largerDots">...................................................................
+          </span>  </em><b style="float: right;">$4.00</b></h5></div>
       <div class="w3-container" id="carta2"><h5>Salmón c/ salsa blanca 
-          <em id='#dotOfMenu'>.............................................................................................................
-            </em><b style="float: right;">$6.50</b></h5></div>
+          <em id='#dotOfMenu'>..................................................................<span id="largerDots">.........................................
+          </span> </em><b style="float: right;">$6.50</b></h5></div>
       <div class="w3-container" id="carta1"><h5>Plato del día 
-          <em id='#dotOfMenu'>.........................................................................................................................
-            </em><b style="float: right;">$5.00</b></h5></div>
+          <em id='#dotOfMenu'>..................................................................<span id="largerDots">..........................................................
+           </span> </em><b style="float: right;">$5.00</b></h5></div>
     
     <div class="w3-container" id="postres">
-      <h1>Postres</h1>
+      <h1> Postres<img src="pictures/postre.png" style="width:50px; height: auto; margin-left: 6px;"></h1>
     </div>
     <div class="w3-container" id="carta2"><h5>Helado
-        <em id='#dotOfMenu'>.........................................................................................................................
-          </em> <b style="float: right;">$2.50</b></h5></div>
+        <em id='#dotOfMenu'>......................................................................<span id="largerDots">..................................................................
+        </span> </em> <b style="float: right;">$2.50</b></h5></div>
     <div class="w3-container" id="carta1"><h5>Leche asada
-        <em id='#dotOfMenu'>.........................................................................................................................
-          </em><b style="float: right;">$2.00</b></h5></div>
+        <em id='#dotOfMenu'>.....................................................................<span id="largerDots">........................................................
+        </span>  </em><b style="float: right; ">$2.00</b></h5></div>
     <div class="w3-container" id="carta2"> <h5>Torta de chocolate con nuez 
-        <em id='#dotOfMenu'>........................................................................................................
-          </em><b style="float: right;">$4.00</b></h5></div>
-    <div class="w3-container" id="carta1"> <h5>Flan 
-        <em id='#dotOfMenu'>.........................................................................................................................
-          </em><b style="float: right;">$5.50</b></h5> </div>
+        <em id='#dotOfMenu'>.....................................................................<span id="largerDots">.................................
+        </span>  </em><b style="float: right;">$4.00</b></h5></div>
+    <div class="w3-container" id="carta1"> <h5>Flan  <br>
+        <em id='#dotOfMenu'>......................................................................<span id="largerDots">......................................................................
+        </span>  </em><b style="float: right;">$5.50</b></h5> </div>
     
   </div>
 </div>
@@ -424,6 +477,14 @@ a:active {
 
                 console.log(images);
 
+  let arrow = [{
+    src : "pictures/arrow_l.svg",
+    hoverSrc : "pictures/arrow_l-grey.svg"
+  },{
+      src : "pictures/arrow_r.svg",
+      hoverSrc: "pictures/arrow_r-grey.svg"
+    }];  
+
 var tittle = images.descriptionTittle;
 var text = document.getElementById("img_description");
 var img = document.getElementById("lag");
@@ -446,6 +507,29 @@ blackstar.addEventListener('mouseover', function(){
 blackstar.addEventListener('mouseout', function(){
   blackstar.src = oldstar;
 });
+
+// Change the img src for a new one with a grey arrow
+
+document.getElementById("arrow_l").addEventListener('mouseover', function(evt) {
+    this.src = arrow[0].hoverSrc;
+});
+
+document.getElementById("arrow_r").addEventListener('mouseover', function(evt) {
+    this.src = arrow[1].hoverSrc;
+});
+
+//puts defaulta image source
+
+document.getElementById("arrow_l").addEventListener('mouseout', function(evt) {
+    this.src = arrow[0].src;
+});
+
+document.getElementById("arrow_r").addEventListener('mouseout', function(evt) {
+    this.src = arrow[1].src;
+});
+
+
+ 
 
 </script>
 
