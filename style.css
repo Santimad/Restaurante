@@ -1,0 +1,279 @@
+
+input, select {
+  font-size: 16.7px;
+}
+b{
+  color: #641E16;
+}
+
+body,h1,h5 {font-family: "Stylish", cursive}
+table {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    border-radius: 4px;
+    margin-top:20px;
+}
+h5 {
+  color:black;
+  font-size: 24.5px;
+  font-family: 'Dancing Script', cursive;
+}
+body, html {height: 100%}
+a:visited {
+  text-decoration: underline;
+  color: silver;}
+
+a:link {
+  color:silver;
+}
+
+
+a:hover{
+  text-decoration: underline;
+  color: #282c37;
+}
+
+a:active { 
+  color: #282c37;
+}
+
+.bgimg {
+  background-image: url('pictures/parr.jpg');
+  background-color: black;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.w3-button {
+      background-color: #8B4513;
+      box-shadow: 2px 5px 5px  black;
+      border-radius: 4px;
+      color: ivory;
+      transition: all .3s ease;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      }
+
+.w3-button-white {
+  background-color: #D2691E;
+  color: white;
+}
+
+.novedades {
+  width: 30%;
+  height: 440px;
+  background-color: rgba(255, 204, 102,0.75); 
+  margin-left: 30px;
+  margin-top: 60px; 
+  border: 4px solid black; 
+  box-shadow: 4px 4px 4px black;
+}  
+
+.starImages img {
+    height: 34px; 
+    width: 34px;
+    margin-top: 7px;
+}
+
+.img_slide{
+    border-radius: 50%; 
+    /*max-width: 60%;
+    max-height: 60%; */
+    width : 60%;
+    height: auto;
+    /*border: 2px solid black;
+    box-shadow: 3px 3px 3px 3px #D4AC0D;*/
+    margin-top: 5px;
+    position: absolute; top: 150px;
+    display: inline-block;
+}
+
+.description {
+ 
+  margin-left: 2px; 
+  margin-top: 160px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.favIcon {
+  width: 30px; height: 30px; 
+}
+
+/*
+
+ .entradas_table>tr div:nth-child(odd) {
+  background-color: grey;
+} Not working at all :'( 
+*/
+
+/*
+ * This is a RIBBON extra class
+
+
+.ribbon{
+  font-size:20px;
+  position:relative;
+  display:inline-block;
+  margin:5em;
+  text-align:center;
+}
+.text{
+  display:inline-block;
+  padding:0.5em 1em;
+  min-width:20em;
+  line-height:1.2em;
+  background: #FFD72A;
+  position:relative;
+}
+.ribbon:after,.ribbon:before,
+.text:before,.text:after,
+.bold:before{
+  content:'';
+  position:absolute;
+  border-style:solid;
+}
+.ribbon:before{
+  top:0.3em; left:0.2em;
+  width:100%; height:100%;
+  border:none;
+  background:#EBECED;
+  z-index:-2;
+}
+.text:before{
+  bottom:100%; left:0;
+  border-width: .5em .7em 0 0;
+  border-color: transparent #FC9544 transparent transparent;
+}
+.text:after{
+  top:100%; right:0;
+  border-width: .5em 2em 0 0;
+  border-color: #FC9544 transparent transparent transparent;
+}
+.ribbon:after, .bold:before{
+  top:0.5em;right:-2em;
+  border-width: 1.1em 1em 1.1em 3em;
+  border-color: #FECC30 transparent #FECC30 #FECC30;
+  z-index:-1;
+}
+.bold:before{
+  border-color: #EBECED transparent #EBECED #EBECED;
+  top:0.7em;
+  right:-2.3em;
+}
+
+
+* ENd of ribbon extra class
+*/
+
+  @media only screen and (max-width: 768px) {
+    #footer {
+        width: 100%; 
+        border-top: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+      .notShow {
+        display:none;
+      }
+
+      .novedades {
+        display: none;
+      }
+
+      #largerDots {
+        display:none;
+      }
+  }
+
+  @media only screen and (min-width: 768px) {
+      #footer {
+        display: none;
+        width: 100%; 
+        border-top: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+  }
+
+      #grad {
+        width: 100%; 
+        border-bottom: 2px solid #D2691E;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.91) ,rgba(139,69,19,0.77));
+      }
+
+      #novedades {
+        margin-left: 10px; 
+        font-family: 'Dancing Script', cursive; 
+        font-size: 40px;
+        color:#641E16;
+      }
+
+      #img_description {
+        font-family: 'Indie Flower', cursive;
+        font-size: 24.6px; 
+        color: black; 
+        text-align: center;
+      
+      }
+
+      #pave_icon_paragraph {
+        float: right; 
+        position: absolute; 
+        bottom: -15px;
+        z-index: -1;
+      }
+
+      #pave_icon_img {
+        width: 250px; 
+        height: 200px;
+        filter: alpha(opacity=50); opacity: 0.3;
+      }
+
+      
+
+      #platoPrincipal {
+        background-color: rgba(100,30,22,0.9); /*730d0d*/
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+       
+      }
+
+      #entrada {
+        background-color: rgba(0,82,33,0.8);
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        
+        
+      }
+
+      #postres {
+        background-color: rgba(0,100,90,0.9);
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        
+      } 
+
+      #carta1 {
+        background-color: rgba(139,69,19,0.75);
+        box-shadow: 0px 2px 5px 1px black inset;
+      }
+      #carta2{
+        background-color: rgba(210,105,30,0.7);
+      }
+
+      #dotOfMenu { /* dots of menú */
+        margin-left: 4px;
+        color: 282c37;
+      }
+
