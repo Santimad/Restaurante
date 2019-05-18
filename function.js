@@ -1,5 +1,5 @@
 
-let images = [{ src: 'pictures/lagsaña.jpg',
+let images = [{ src: 'pictures/lagsana.jpg',
                 description: 'Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.',
                 descriptionTittle: 'Plato del dia: '
                 },{
@@ -86,6 +86,8 @@ document.getElementById("arrow_l").addEventListener('click', function(evt) {
 document.getElementById("arrow_r").addEventListener('click', function(evt) {
     slideNovedades();
 });
+
+
 
 
 
