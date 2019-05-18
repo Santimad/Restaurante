@@ -1,11 +1,11 @@
 
-let images = [{ src: 'pictures/lagsana.jpg',
-                description: 'Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.',
-                descriptionTittle: 'Plato del dia: '
-                },{
-                src: 'pictures/salmon.jpg',
+let images = [{ src: 'pictures/salmon.jpg',
                 description: 'Una sutil combinacion de sabores es la clave de nuestras comidas, hechas simplemente para usted. ',
                 descriptionTittle:'Salmón'
+                },{
+                src: 'pictures/lagsana.jpg',
+                description: 'Exquisita lagsagna. Nuestra especialidad de la casa hará explotar su paladar en una bomba de sabores.',
+                descriptionTittle: 'Plato del dia: '
                 },{
                 src:'pictures/phelado.jpg',
                 description: 'Para que la historia sea maravillosa es necesario de un dulce final',
