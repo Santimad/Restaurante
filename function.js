@@ -7,7 +7,7 @@ let images = [{ src: 'pictures/lagsaña.jpg',
                 description: 'Una sutil combinacion de sabores es la clave de nuestras comidas, hechas simplemente para usted. ',
                 descriptionTittle:'Salmón'
                 },{
-                src:'pictures/phelado',
+                src:'pictures/phelado.jpg',
                 description: 'Para que la historia sea maravillosa es necesario de un dulce final',
                 descriptionTittle: 'Postre de chocolate italiano'}
             ],
@@ -21,21 +21,24 @@ let images = [{ src: 'pictures/lagsaña.jpg',
 
                 console.log(images);
 
-var tittle = images.descriptionTittle, text = document.getElementById("img_description"),
+text = document.getElementById("img_description"),
 img = document.getElementById("lag");
+var beginSlide = 0;
+var i = 0;
 
-async function slideNovedades(images){
- for(let i = 0; i < images.length; i++){ 
+function slideNovedades(){
+
+
+    if(i >= images.length || i < 0){
+    i = beginSlide;
+ } 
+    var tittle = images[i].descriptionTittle
     lag.src = images[i].src;
-    text.innerHTML = "<b> <em>" + tittle + " </em></b>" + images.description;
-    await sleep(2000);
-    }
+    text.innerHTML = "<b> <em>" + tittle + " </em></b>" + images[i].description;
+    i++;
 }
 
-slideNovedades(img);
-
- 
-
+slideNovedades();
 
 
 //implementation of slide widget ;)
@@ -74,6 +77,14 @@ document.getElementById("arrow_l").addEventListener('mouseout', function(evt) {
 
 document.getElementById("arrow_r").addEventListener('mouseout', function(evt) {
     this.src = arrow[1].src;
+});
+
+document.getElementById("arrow_l").addEventListener('click', function(evt) {
+    slideNovedades();
+});
+
+document.getElementById("arrow_r").addEventListener('click', function(evt) {
+    slideNovedades();
 });
 
 
