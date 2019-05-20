@@ -1,4 +1,20 @@
 
+window.onload = init;
+
+function init() {
+    console.log("Page is loaded ;)");
+
+    let b = document.querySelector(".w3-button"); 
+
+    console.log(b);
+
+        b.addEventListener('click', function(evt){
+            console.log("The button clicked was: "+ evt.button);
+        })
+    
+       
+}
+
 let images = [{ src: 'pictures/salmon.jpg',
                 description: 'Una sutil combinacion de sabores es la clave de nuestras comidas, hechas simplemente para usted. ',
                 descriptionTittle:'Salmón'
@@ -27,8 +43,6 @@ var beginSlide = 0;
 var i = 0;
 
 function slideNovedades(){
-
-
     if(i >= images.length || i < 0){
     i = beginSlide;
  } 
@@ -52,8 +66,8 @@ var blackstar = document.getElementById("blackstar");
 
 blackstar.addEventListener('mouseover', function(){
           blackstar.src= goldenstar;
-          
-});
+          blackstar.style.cursor= 'pointer';
+        });
 
 blackstar.addEventListener('mouseout', function(){
   blackstar.src = oldstar;
@@ -63,10 +77,12 @@ blackstar.addEventListener('mouseout', function(){
 
 document.getElementById("arrow_l").addEventListener('mouseover', function(evt) {
     this.src = arrow[0].hoverSrc;
+    this.style.cursor = 'pointer';
 });
 
 document.getElementById("arrow_r").addEventListener('mouseover', function(evt) {
     this.src = arrow[1].hoverSrc;
+    this.style.cursor = 'pointer';
 });
 
 //puts defaulta image source
@@ -88,7 +104,16 @@ document.getElementById("arrow_r").addEventListener('click', function(evt) {
 });
 
 
+window.onkeydown = escape;
 
+function escape(evt){
+    console.log("key pressed:" + evt.keyCode);
+    
+    if(evt.keyCode === 27) {
+        document.getElementById('menu').style.display= 'none';
+        document.getElementById('contact').style.display='none'
+    }
+}
 
 
 
